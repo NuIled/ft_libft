@@ -4,8 +4,6 @@ size_t strlen(const char *s)
     i = 0;
 
     while (s[i])
-    {
         i++;
-    }
-    return (s[i]);
+    return (i);
 }
