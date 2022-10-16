@@ -32,7 +32,7 @@ int main()
   char src [5]  = "abv";
   char dst [10]  = "ccc4124";
   //  printf("\nAfter Swapping: = %zu", strlcdat(dst, src,11));
- printf("\nAfter Swapping: = %zu", strlcdat(dst, src,3));
+ printf("\nAfter Swapping: = %lu", strlcdat(dst, src,1));
 
-  //printf("\nSwapping: = %lu\n", strlcat(dst, src, 3));
+  //printf("\nSwapping: = %lu\n", strlcat(dst, src, 1));
 }
