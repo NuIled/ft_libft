@@ -1,15 +1,38 @@
-size_t strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
+#include <stdio.h>
+#include <string.h>
+size_t strvlen(const char *s)
 {
-int i;
-i = 0;
+    int i;
+    i = 0;
 
-    while (srclen < destlen && dstsize > i)
-    {
-        /* code */
-    }
-    
+    while (s[i])
+        i++;
+    return (i);
 }
-int main() {
+size_t strlcdat(char * dst, const char * src, size_t dstsize)
+{
 
-  return 0;
+size_t len_dst;
+size_t len_src;
+len_src = strvlen(src); 
+len_dst = strvlen(dst);  
+if (dstsize - 1 < len_dst)
+    return (dstsize + len_src);
+len_src = 0;
+    while (src[len_src])
+    {
+      dst[len_dst] = src[len_src];
+      len_dst++;
+      len_src++;
+    }
+  return (len_dst);
+}
+int main()
+{
+  char src [5]  = "abv";
+  char dst [10]  = "ccc4124";
+  //  printf("\nAfter Swapping: = %zu", strlcdat(dst, src,11));
+ printf("\nAfter Swapping: = %zu", strlcdat(dst, src,3));
+
+  //printf("\nSwapping: = %lu\n", strlcat(dst, src, 3));
 }
