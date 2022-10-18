@@ -1,27 +1,29 @@
 #include "libft.h"
+#include <string.h>
 #include <stdio.h>
 
 int ft_strncmp ( const char * str1, const char * str2, size_t num )
 {
-    int i;
-    i =0;
-    size_t str1len;
-    str1len = ft_strlen(str1);
-    while (str1[i]&& num < str1len)
+    size_t i;
+    unsigned char *str0;
+    str0 = (unsigned char*)(str1);
+    unsigned char *str3;
+    str3 = (unsigned char *)(str2);
+    i = 0;
+    while ((str0[i] || str3[i]) && i <= num - 1 )
     {
-        if (str1[i]==str2[i])
-            i++;
-        else if (str1[i] > str2[i])
-            return(1);
-        else if (str1[i] < str2[i])
-            return(-1);
+    if (str0[i] > str3[i] )
+        return(1);
+    else if (str0[i] < str3[i])
+        return (-1);   
+    i++;
     }
     return(0);
-}
-// /*int main()
-// {
-//     char b[]="asda";
-//      char a[]="asdasd";
-//    // printf("%d",ft_strncmp(a,b,2));
-//     printf("\n%d",ft_strncmp(a,b,2));
 // }
+//  int main()
+//  {
+//     char b[]="ghsdgasdg]200";
+//       char a[]="ghsdgasdg";
+//     printf("%d",ft_strncmp(a,b,0));
+//      printf("\n%d",strncmp(a,b,0));
+//   }

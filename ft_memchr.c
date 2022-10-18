@@ -22,9 +22,9 @@ void *ft_memchr(const void *s, int c, size_t n)
             return (&l[i]);
     return (NULL);
 }
-int main ()
-{
-    char a[]="/|\x12\xff\x09\0\x42\042\0\42|\\";
-     printf("%s",ft_memchr(a,'\0',12));
-     printf("\n %s",memchr(a,'\0',12));
- }
+// int main ()
+// {
+//     char a[]="/|\x12\xff\x09\0\x42\042\0\42|\\";
+//      printf("%s",ft_memchr(a,'\0',12));
+//      printf("\n %s",memchr(a,'\0',12));
+//  }

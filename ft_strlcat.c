@@ -7,8 +7,11 @@ size_t ft_strlcat(char * dst, const char * src, size_t dstsize)
 size_t len_dst;
 size_t len_src;
 len_src = ft_strlen(src); 
-len_dst = ft_strlen(dst);  
-if (dstsize - 1 < len_dst)
+len_dst = ft_strlen(dst);
+
+if (dstsize == 0)
+    return (len_src);
+if (dstsize < len_dst -1)
     return (dstsize + len_src);
 len_src = 0;
     while (src[len_src])
