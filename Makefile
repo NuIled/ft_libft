@@ -4,9 +4,10 @@ CC = cc
 
 CFLAGS = -Werror -Wextra -Wall
 
-SRC =   ft_ memset.c   ft_isalnum.c    ft_isdigit.c    ft_strchr.c     ft_strlen.c     ft_tolower.c \
-	ft_isalpha.c    ft_isprint.c    ft_strlcat.c    ft_strncmp.c    ft_toupper.c \
-	ft_atoi.c     ft_isascii.c    ft_memchr.c     ft_strlcpy.c    ft_strrchr.c   ft_memmove.c
+SRC =  ft_isalnum.c    ft_isprint.c    ft_strlcat.c    ft_strrchr.c \
+    ft_isalpha.c    ft_memchr.c     ft_strlcpy.c    ft_tolower.c \
+   ft_isascii.c    ft_memmove.c    ft_strlen.c     ft_toupper.c \
+ft_atoi.c       ft_isdigit.c    ft_strchr.c     ft_strncmp.c   
 
 OBJECTS  = $(SRC:.c=.o)
 
