@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 20:04:53 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/20 00:08:10 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/10/20 00:59:26 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main()
 {
     char a [255]= "thiß ß\xde\xad\xbe\xeftriñg will be øvérlapéd !\r\n";
     char b [255]= "";
-   printf ("%s",ft_memmove(a, b, 5));
-    printf ("\n %s",memmove((a), (b), 5));
+   printf ("%s",ft_memmove(a, b, 0));
+    printf ("\n %s",memmove(a,b, 0));
     
 }
