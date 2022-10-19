@@ -15,7 +15,7 @@ RM = /bin/rm -rf
 all = $(NAME)
 
 $(NAME) :$(OBJECTS)
-	$(CC) $(CFLAGS) -c $(SRC)
+# $(CC) $(CFLAGS) -c $(SRC)
 	ar rcs $(NAME) $(OBJECTS)
 
 clean :
