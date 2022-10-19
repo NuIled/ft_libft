@@ -19,7 +19,7 @@ int ft_strncmp ( const char * str1, const char * str2, size_t num )
     i++;
     }
     return(0);
-// }
+}
 //  int main()
 //  {
 //     char b[]="ghsdgasdg]200";
