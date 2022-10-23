@@ -2,14 +2,14 @@
 #include <stdlib.h>
 int ft_atoi(const char *str)
 {
-    int i;
+    unsigned long i;
     i = 0;
     int b;
     b = 0;
     int sign;
     sign = 1;
-   
-    while (str[b]== '\t'|| str[b]== ' ')
+
+    while (str[b]== ' '|| str[b]== '\t')
         b++;
     if (str[b]==45){
         sign = -1;
@@ -19,9 +19,13 @@ int ft_atoi(const char *str)
      while (str[b]>='0' && str[b]<='9')
         {i = (i * 10) + ((str[b]) - '0');
         b++;}
-    return (i*sign);
+    if (i >9223372036854775807 && sign == 1)
+        return (-1);
+    else if (i > 9223372036854775807 && sign == -1)
+        return (0);
+    return ((i * sign));
 
-    
+
 }
 // int main ()
 // {

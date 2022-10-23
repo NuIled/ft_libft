@@ -1,33 +1,35 @@
 #include <stdio.h>
 #include "libft.h"
+#include <string.h>
 
-size_t ft_strlcat(char * dst, const char * src, size_t dstsize)
+size_t ft_strlcat(char * dst, const char * src, size_t n)
 {
-
-size_t len_dst;
-size_t len_src;
-len_src = ft_strlen(src); 
-len_dst = ft_strlen(dst);
-
-if (dstsize == 0)
-    return (len_src);
-if (dstsize < len_dst -1)
-    return (dstsize + len_src);
-len_src = 0;
-    while (src[len_src])
+  size_t lensrc;
+  size_t lendst;
+  size_t l;
+  l = 0;
+  lensrc = ft_strlen(src);
+  lendst = ft_strlen(dst);
+   if (n >= lendst)
+      return(lendst-1);
+  while (l < n)
     {
-      dst[len_dst] = src[len_src];
-      len_dst++;
-      len_src++;
+      dst[lendst] = src[l];
+      l++;
+      lendst++;
     }
-  return (len_dst);
+    dst[lendst]='\0';
+  return(lendst - n-1 );
 }
 // int main()
 // {
-//   char src [5]  = "abv";
-//   char dst [10]  = "ccc4124";
-//   //  printf("\nAfter Swapping: = %zu", strlcdat(dst, src,11));
-//  printf("\nAfter Swapping: = %lu", strlcdat(dst, src,1));
+// char *str = "the cake is a lie !\0I'm hidden lol\r\n";
+// 	char buff1[0xF00] = "there is no stars in the sky";
+// 	char buff2[0xF00] = "there is no stars in the sky";
+// 	size_t max = strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4;
+//  printf("\nAfter Swapping: = %lu", ft_strlcat(buff2, str, max));
+//  printf("\nAfter Swapping: = %lu", strlcat(buff2, str, max));
 
-//   //printf("\nSwapping: = %lu\n", strlcat(dst, src, 1));
+//   //printf("\nSwapping: = %lu\n", strlcat(dst, src, 1)) printf("\nAfter Swapping: = %lu", ft_strlcat(buff2, str, max));
+// ;
 // }
