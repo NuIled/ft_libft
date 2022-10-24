@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 20:04:53 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/22 01:24:25 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/10/24 05:06:13 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void *ft_memmove(void *dest, const void *src, size_t n)
     d = (unsigned char*)(dest);
     unsigned char* s;
     s = (unsigned char*)(src);
-   
+
      if (d == '\0' && s == '\0')
             return(NULL);
      if (d > s )
@@ -30,23 +30,16 @@ void *ft_memmove(void *dest, const void *src, size_t n)
         {
             --n;
         d[n] = s[n];
-        
+
         }
     }
-    else 
+    else
     while (n > i )
     {
         d[i] = s[i];
        i++;
     }
     return(d);
-    
+
 }
-//   int main()
-//  {
-//      char b [255]= "";
-//     char a [255]= "salamo3alaykoum";
-//      printf ("%s",ft_memmove(a, a, 0));
-//    printf ("\n %s",memmove(a,a, 0));
-    
-//   }
+

@@ -18,8 +18,13 @@ char *ft_strrchr(const char *s, int c);
 int ft_toupper(int c);
 int ft_tolower(int c);
 void *ft_memmove(void *dest, const void *src, size_t n);
-void *ft_memmove(void *dest, const void *src, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 void ft_bzero(void *s, size_t n);
 void *ft_memset(void *b, int c, size_t n);
+void *ft_calloc(size_t count, size_t n);
+void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+char *ft_strdup(const char *s1);
+char *ft_strnstr(const char *h, const char *nl, size_t n);
+char *ft_substr(char const *s, unsigned int start,size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
 #endif
