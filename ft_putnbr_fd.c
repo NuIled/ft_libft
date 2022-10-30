@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 10:06:19 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 12:27:45 by aoutifra         ###   ########.fr       */
+/*   Created: 2022/10/30 15:22:04 by aoutifra          #+#    #+#             */
+/*   Updated: 2022/10/30 15:28:08 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putchar_fd(char c, int fd)
+void ft_putnbr_fd(int n, int fd)
 {
-	write(fd, &c, 1);
+	char *s;
+	s = ft_itoa(n);
+	ft_putstr_fd(s,fd);
 }

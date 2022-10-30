@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 10:06:19 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 12:27:45 by aoutifra         ###   ########.fr       */
+/*   Created: 2022/10/30 12:03:26 by aoutifra          #+#    #+#             */
+/*   Updated: 2022/10/30 12:32:28 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putchar_fd(char c, int fd)
+
+void ft_putendl_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	if(!s)
+		return;	
+	ft_putstr_fd(s,fd);
+	write(fd, "\n", 1);
+
 }

@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:07:16 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 10:07:17 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/10/30 10:44:08 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void ft_striteri(char *s, void (*f)(unsigned int,char*))
 	int i;
 
 	i = 0;
+	
 	if (s)
 	{
 		while (s[i])
@@ -24,6 +25,5 @@ void ft_striteri(char *s, void (*f)(unsigned int,char*))
 			i++;
 		}
 	}
-	
 	
 }

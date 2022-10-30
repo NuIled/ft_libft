@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:07:33 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 10:08:08 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/10/30 10:42:34 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ size_t ft_strlcat(char * dst, const char * src, size_t n)
   }
   if (lendst + i < n)
     dst[lendst + i] = '\0';
-  return (lendst + i);
+  return (lendst);
 }
