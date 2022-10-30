@@ -1,35 +1,37 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/30 10:07:33 by aoutifra          #+#    #+#             */
+/*   Updated: 2022/10/30 10:08:08 by aoutifra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <string.h>
 
 size_t ft_strlcat(char * dst, const char * src, size_t n)
 {
   size_t lensrc;
   size_t lendst;
-  size_t l;
-  l = 0;
+  size_t i;
+  i = 0;
+  // char s;
+  // s = (char *)(src);
   lensrc = ft_strlen(src);
+  if (n == 0)
+       return(lensrc);
   lendst = ft_strlen(dst);
-   if (n >= lendst)
-      return(lendst-1);
-  while (l < n)
-    {
-      dst[lendst] = src[l];
-      l++;
-      lendst++;
-    }
-    dst[lendst]='\0';
-  return(lendst - n-1 );
+  if (n < lendst)
+    return(lensrc + n);
+  while (n > lendst && src[i])
+  {
+      dst[lendst + i] = src[i];
+      i++;
+  }
+  if (lendst + i < n)
+    dst[lendst + i] = '\0';
+  return (lendst + i);
 }
-// int main()
-// {
-// char *str = "the cake is a lie !\0I'm hidden lol\r\n";
-// 	char buff1[0xF00] = "there is no stars in the sky";
-// 	char buff2[0xF00] = "there is no stars in the sky";
-// 	size_t max = strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4;
-//  printf("\nAfter Swapping: = %lu", ft_strlcat(buff2, str, max));
-//  printf("\nAfter Swapping: = %lu", strlcat(buff2, str, max));
-
-//   //printf("\nSwapping: = %lu\n", strlcat(dst, src, 1)) printf("\nAfter Swapping: = %lu", ft_strlcat(buff2, str, max));
-// ;
-// }

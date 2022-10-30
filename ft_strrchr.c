@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/30 10:09:25 by aoutifra          #+#    #+#             */
+/*   Updated: 2022/10/30 10:09:26 by aoutifra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "libft.h"
-#include <stdio.h> 
 char *ft_strrchr(const char *s, int c)
 {
     int i;
@@ -20,13 +32,3 @@ char *ft_strrchr(const char *s, int c)
 
 }
 
-// int main()
-// {
-//     char *src = "īœ˙ˀ˘¯ˇ¸¯.œ«‘––™ª•¡¶¢˜ˀ";
-// 	char *d1 = strrchr(src, L'–');
-// 	char *d2 = ft_strrchr(src, L'–');
-
-//    printf("%s",ft_strrchr("",'r'));
-//       printf("\n %s",strrchr("",'r'));
-
-// }

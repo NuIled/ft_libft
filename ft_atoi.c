@@ -1,5 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/30 10:05:21 by aoutifra          #+#    #+#             */
+/*   Updated: 2022/10/30 10:05:22 by aoutifra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libc.h"
 int ft_atoi(const char *str)
 {
     unsigned long i;
@@ -9,7 +20,7 @@ int ft_atoi(const char *str)
     i = 0;
     b = 0;
     sign = 1;
-    while (str[b]== ' '|| str[b]== '\t' || str[b]== '\n')
+    while (str[b]== 32|| str[b]<= 9 || str[b]<= 13)
         b++;
     if (str[b]==45)
     {
@@ -31,9 +42,3 @@ int ft_atoi(const char *str)
 
 
 }
-// int main ()
-// {
-//     char b []="     +-10 sds";
-// printf("%d", atoi(b));
-// }
-

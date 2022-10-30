@@ -1,36 +1,26 @@
-#include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
-// char *ft_strnstr(const char *h, const char *nl, size_t n)
-// {
-// 	size_t	i;
-// 	size_t	len;
-// 	i = 0;
-// 	if (*h =='\0')
-// 		return(NULL);
-// 	if (*nl=='\0')
-// 		return (char*)(h);
-// 	len = ft_strlen(nl);
-// 	while (h[i] != nl[i] && i < n)
-// 		i++;
-// 	if (h && i < n && nl )
-// 	{
-// 		 while(nl[i]== h[i] && nl)
-// 			i++;
-// 		i -=len-2;
-// 	return(char *)(&nl[i]);
-// 	}
-// 	return(NULL);
-// }
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/30 10:09:06 by aoutifra          #+#    #+#             */
+/*   Updated: 2022/10/30 10:09:15 by aoutifra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 char	*ft_strnstr(const char *h, const char *nl, size_t n)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	if (!*nl || n == 0)
-		return ((char *)h);
+	if (!*nl || nl =='\0')
+		return ((char *)(h));
+	if (n <= 0)
+		return(NULL);
 	while (h[i] && i < n)
 	{
 		j = 0;
@@ -50,9 +40,3 @@ char	*ft_strnstr(const char *h, const char *nl, size_t n)
 	return (0);
 }
 
-int main()
-{
-	char s1[44] = "see FF your FF return FF now FF";
-	char s2[2] = "FF";
-	printf("%s",ft_strnstr(s1, s2, 12));
-}

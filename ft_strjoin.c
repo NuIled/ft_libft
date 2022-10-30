@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/30 10:07:24 by aoutifra          #+#    #+#             */
+/*   Updated: 2022/10/30 10:08:04 by aoutifra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 char *ft_strjoin(char const *s1, char const *s2)
 {
 	size_t i;
@@ -17,11 +27,3 @@ char *ft_strjoin(char const *s1, char const *s2)
 	d = ft_memmove(d,s2,i-b);
 	return (p);
 }
-// int main ()
-// {
-// 	char *s1 = "where is my ";
-// 	char *s2 = "malloc ???";
-// 	char *s = ft_strjoin(s1,s2);
-// 	printf("%s",s);
-// }
-
