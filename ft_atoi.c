@@ -6,11 +6,12 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:05:21 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 10:05:22 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/10/30 20:48:15 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libc.h"
+
 int ft_atoi(const char *str)
 {
     unsigned long i;

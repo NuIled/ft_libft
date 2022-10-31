@@ -6,12 +6,10 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 20:04:53 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/24 05:06:13 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/10/30 20:45:57 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include <string.h>
 #include "libft.h"
 void *ft_memmove(void *dest, const void *src, size_t n)
 {

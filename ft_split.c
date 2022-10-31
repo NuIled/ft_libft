@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:12:46 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 10:06:49 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/10/30 20:52:09 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static char* wordchar(const char *str , char c)
     return dst;
 }
 
-char **ft_split(char const *s, char c)
+static char **ft_spli(char const *s, char c)
 {
     char    **splitindex;
     int     i;
@@ -90,5 +90,9 @@ char **ft_split(char const *s, char c)
     }
     splitindex[j] = NULL;
     return splitindex;
+}
+char **ft_spli(char const *s, char c)
+{
+    return(ft_spli(s,c));
 }
 
