@@ -1,6 +1,10 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
-        "stdio.h": "c"
+        "*.excalidraw": "json",
+        "*.excalidrawlib": "json",
+        "stdio.h": "c",
+        "libft.h": "c",
+        "unistd.h": "c"
     }
 }

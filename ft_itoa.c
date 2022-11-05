@@ -6,77 +6,72 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:05:56 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 10:05:57 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/03 18:30:53 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static int miniclalc(long n)
+
+static int	minicalc(long n)
 {
-    int size;
+	int	size;
 
-    size = 0;
-
-    while (n)
-    {
-      if(n < 0)
-        {
-            n = n * -1;
-            size++;
-        }
-        if ( n )
-        {
-           n = (n / 10);
-            size++;
-
-        }
-    }
-        return size;
+	size = 0;
+	if (n == 0)
+		return (1);
+	while (n)
+	{
+		if (n < 0)
+		{
+			n = n * -1;
+			size++;
+		}
+		if (n)
+		{
+			n = (n / 10);
+			size++;
+		}
+	}
+	return (size);
 }
 
-static char *ft_ret(long n)
+static char	*func(char *d, long nb, int c)
 {
-    char *d;
-    int c;
-    c = miniclalc(n);
-    d = (char *)malloc(sizeof(char)*(c+1));
-    if (d == 0)
-        return(NULL);
-    if (0 == n )
-    {
-        d = (char *)malloc(sizeof(char)*(2));
-        if (d == 0)
-            return(NULL);
-        d[0]= '0';
-        d[1]= '\0';
-    return d;
-    }
-    while (n) 
-    {
-        d[c]='\0';
-        c--;
-        if(n < 0)
-        {
-            n = n * -1;
-            d[0]= '-';
-        }
-        while (n)
-        {
-            d[c] = ((n%10))+'0';
-            n /= 10;
-            c--;
-        }
-    }
-    return(d);
-
-}
-char *ft_itoa(int n)
-{    
-    char *d;
-    int i;
-
-    i = 0;
-    d =  ft_ret(n);
-    return(d);
+	while (nb > 0)
+	{
+		d[c] = '\0';
+		c--;
+		while (nb)
+		{
+			d[c] = (nb % 10) + '0';
+			nb /= 10;
+			c--;
+		}
+	}
+	return (d);
 }
 
+char	*ft_itoa(int n)
+{
+	char	*d;
+	int		c;
+	long	nb;
+
+	nb = n;
+	c = minicalc(nb);
+	d = (char *) malloc(sizeof(char) * (c + 1));
+	if (d == 0)
+		return (NULL);
+	if (0 == nb)
+	{
+		d[0] = '0';
+		d[c] = '\0';
+	}
+	else if (nb < 0)
+	{
+			nb = nb * -1;
+			d[0] = '-';
+	}
+	d = func(d, nb, c);
+	return (d);
+}

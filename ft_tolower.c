@@ -6,13 +6,15 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:09:47 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 10:09:48 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/01 10:25:19 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+#include"libft.h"
+
+int	ft_tolower(int c)
 {
-    if(c >='A'&& c <='Z')
-        c += 32;
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }

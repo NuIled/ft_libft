@@ -6,13 +6,15 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:05:42 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 10:05:43 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/10/31 14:35:40 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+#include"libft.h"
+
+int	ft_isascii(int c)
 {
-    if(c >= 0 && c <= 127)
-        return (1);
-    return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

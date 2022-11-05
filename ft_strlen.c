@@ -6,16 +6,18 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:08:29 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 10:08:30 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/01 10:01:21 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-size_t ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-    int i;
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

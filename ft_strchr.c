@@ -6,27 +6,32 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:06:58 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 10:06:59 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/05 20:32:41 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-char *ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
-    int i;
-    i = 0;
-    char *str = (char *)(s);
-    while (str[i])
-    {
-        if (str[i] == c )
-        {
-            return (&str[i]);
-        }
-        i++;
-    }
-    if (str[i] == '\0'&& c == '\0')
-    {
-        return (&str[i]);
-    }
-    return(0);
+	int		i;
+	char	*str;
+
+	str = (char *)(s);
+	char k;
+	k = (char) c;
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == k)
+		{
+			return (&str[i]);
+		}
+		i++;
+	}
+	if (str[i] == '\0' && k == '\0')
+	{
+		return (&str[i]);
+	}
+	return (0);
 }

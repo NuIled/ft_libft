@@ -6,13 +6,15 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:05:39 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/10/30 10:05:40 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/10/31 14:34:19 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+#include"libft.h"
+
+int	ft_isalpha(int c)
 {
-    if((c >='A'&& c <='Z')||(c >='a'&& c <='z'))
-        return (1);
-    return (0);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	return (0);
 }
