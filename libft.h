@@ -6,15 +6,15 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:18:06 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/11/02 14:26:32 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/06 01:09:36 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
-#include <stdlib.h>
+# define LIBFT_H
+
 #include <unistd.h>
-#include <stdio.h>
+#include <stdlib.h>
 
 size_t	ft_strlen(const char *s);
 int		ft_atoi(const char *str);

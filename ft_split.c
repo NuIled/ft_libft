@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:12:46 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/11/04 22:43:35 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/06 00:55:58 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ static int	word(const char *str, char c)
 // 	}
 // 	return(&ptr);
 // }
+
 static char	*wordchar(const char *str, char c)
 {
 	int		j;

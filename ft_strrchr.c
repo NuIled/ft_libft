@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:09:25 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/11/05 20:33:24 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/06 01:04:37 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
 	char	*str;
-	char 	k;
-	
+	char	k;
+
 	k = (char) c;
 	str = (char *)(s);
 	i = ft_strlen(str);
@@ -31,13 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 		return (&str[i]);
 	return (NULL);
 }
-
-// int main ()
-// {
-// 	char *src = "abbbbbbbb";
-//         char *d1 = strrchr(src, 'a');
-//         char *d2 = ft_strrchr(src, 'a');
-// 		printf("%s",d2);
-// 		printf("\n%s",d1);
-
-// }

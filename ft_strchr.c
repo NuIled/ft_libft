@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:06:58 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/11/05 20:32:41 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/06 01:03:45 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char	*ft_strchr(const char *s, int c)
 {
 	int		i;
 	char	*str;
+	char	k;
 
 	str = (char *)(s);
-	char k;
 	k = (char) c;
 	i = 0;
 	while (str[i])
