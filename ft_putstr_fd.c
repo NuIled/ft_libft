@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:22:40 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/11/03 21:09:41 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/07 23:47:54 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	while (s[i])
+	if (s)
 	{
-		ft_putchar_fd (s[i], fd);
-		i++;
+		while (s[i])
+		{
+			ft_putchar_fd(s[i], fd);
+			i++;
+		}
 	}
 }

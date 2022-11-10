@@ -6,11 +6,21 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:12:46 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/11/06 00:55:58 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/10 02:03:16 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	ft_free(char **ptr, int i)
+{
+	while (i)
+	{
+		free (ptr[i]);
+		i--;
+	}
+	free(ptr);
+}
 
 static int	word(const char *str, char c)
 {
@@ -30,77 +40,55 @@ static int	word(const char *str, char c)
 	}
 	return (words);
 }
-// static int ft_free(char *ptr)
-// {
-// 	while (ptr)
-// 	{
-// 		free(ptr);
-// 		ptr++;
-// 	}
-// 	return(&ptr);
-// }
 
-static char	*wordchar(const char *str, char c)
+static int	charar(const char *s, char c)
 {
-	int		j;
-	int		i;
-	char	*dst;
+	int	n;
 
-	j = 0 ;
-	i = 0;
-	while (str[i] && str[i] != c)
-		i++;
-	dst = (char *)malloc(sizeof(char) * (i + 1));
-	if (!dst)
-		return (0);
-	while (j < i)
+	n = 0;
+	while (*s != c)
 	{
-		dst[j] = str[j];
-		j++;
+		n++;
+		s++;
+		if (*s == '\0')
+			break ;
 	}
-	dst[j] = '\0';
-	return (dst);
+	return (n);
 }
 
-static char	**spp(const char *s, int fin, char **splitindex, char c)
+char	**loop(char **d, char const *s, char c)
 {
-	int		i;
-	int		b;
 	int		j;
 
 	j = 0;
-	i = 0;
-	while (j < fin)
+	while (*s)
 	{
-		b = 0;
-		while (*s && *s == c)
+		while (*s == c)
 			s++;
-		splitindex[j] = wordchar(s, c);
-		if (!splitindex[j])
-			return (0);
-		while (*s && *s != c)
+		if (*s == '\0')
+			break ;
+		d[j] = ft_substr(s, 0, charar(s, c));
+		if (!d[j])
 		{
-			b = 1;
-			s++;
+			ft_free (d, word(s, c) + 1);
+			return (NULL);
 		}
-		if (b)
-			j++;
+		j++;
+		s = s + charar (s, c);
 	}
-	splitindex[j] = NULL;
-	return (splitindex);
+	d[j] = NULL;
+	return (d);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**splitindex;
-	int		fin;
+	char	**d;
 
-	fin = word(s, c);
 	if (!s)
 		return (NULL);
-	splitindex = (char **)malloc(sizeof(char *) * (word(s, c) + 1));
-	if (!splitindex)
+	d = (char **)malloc(sizeof(char *) * (word(s, c) + 1));
+	if (!d)
 		return (NULL);
-	splitindex = spp(s, fin, splitindex, c);
-	return (splitindex);
+	loop(d, s, c);
+	return (d);
 }

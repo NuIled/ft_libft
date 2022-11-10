@@ -6,15 +6,15 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:18:06 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/11/06 01:09:36 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/10 18:19:51 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <unistd.h>
-#include <stdlib.h>
+# include<unistd.h>
+# include<stdlib.h>
 
 size_t	ft_strlen(const char *s);
 int		ft_atoi(const char *str);
@@ -49,6 +49,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int nb, int fd);
 
 #endif

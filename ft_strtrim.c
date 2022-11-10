@@ -25,3 +25,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 			l--;
 	return (ft_substr(s1, 0, l + 1));
 }
+
+// int main ()
+// {
+// 	char *s1 = "  \t \t \n   \n\n\n\t";
+//         char *s2 = "";
+//         char *ret = ft_strtrim(s1, " \n\t");
+// 		printf("%s",ret);
+// }

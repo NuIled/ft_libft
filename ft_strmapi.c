@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:08:42 by aoutifra          #+#    #+#             */
-/*   Updated: 2022/11/01 12:23:00 by aoutifra         ###   ########.fr       */
+/*   Updated: 2022/11/10 02:06:15 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	i = 0;
 	len = ft_strlen (s);
-	d = malloc (sizeof(char) * (len + 1));
+	d = malloc(sizeof(char) * (len + 1));
 	if (!d)
 		return (NULL);
 	while (s[i])
