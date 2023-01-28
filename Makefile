@@ -6,7 +6,7 @@
 #    By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/20 11:40:00 by aoutifra          #+#    #+#              #
-#    Updated: 2022/11/20 11:40:01 by aoutifra         ###   ########.fr        #
+#    Updated: 2023/01/26 00:00:22 by aoutifra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,19 +24,18 @@ NAME			= libft.a
 
 all:			$(NAME)
 
-
 $(NAME): 	$(OBJS) 
-				ar -rcs $(NAME) $(OBJS)
+	ar -rcs $(NAME) $(OBJS)
 
 %.o : %.c $(HEADER)
-	$(CC) $(CCFLAGS)  -c $<
+	$(CC) $(CCFLAGS) -c $< -o $@
 
 clean:
-				@$(RM) $(OBJS)
+	@$(RM) $(OBJS)
 
-fclean:			clean
-				$(RM) $(NAME)
+fclean:	clean
+	$(RM) $(NAME)
 
-re:				fclean $(NAME)
+re:	fclean $(NAME)
 
-.PHONY:			all clean fclean re bonus
+.PHONY:	all clean fclean re bonus
